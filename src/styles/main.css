@@ -1,0 +1,146 @@
+
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style global */
+html, body {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Press Start 2P', monospace; /* tu peux utiliser une autre si tu veux */
+  color: #e0c25f;
+}
+
+body 
+{
+  background-size: cover;        /* couvre toute la fenêtre */
+  background-position: center;   /* centrée */
+  background-repeat: no-repeat;
+}
+
+body.work {
+  background-image: url("../assets/PsychoWork.png");
+  background-color: #e05f09;
+}
+
+body.shortBreak {
+  background-image: url("../assets/PsychoBreak.png");
+  background-color: rgb(26, 199, 98);
+}
+
+body.longBreak {
+  background-image: url("../assets/PsychoSleep.png");
+  background-color: rgb(80, 167, 244);
+}
+
+body.done {
+  background-image: url("../assets/PsychoHomePage.png");
+  background-color: #e0c25f;
+}
+
+/* Titre de la candidature */
+.file-title {
+text-align: center;
+font-weight: bold;
+font-size: 2rem;
+color: #593c1f;
+margin-bottom: 1.5rem;
+}
+
+
+/* Boutons */
+button {
+border: 2px solid #3b2d1f;
+padding: 0.6rem 1.2rem;
+margin-right: 0.5rem;
+font-size: 1rem;
+cursor: pointer;
+font-family: monospace;
+box-shadow: 2px 2px 0 #a05e26;
+transition: transform 0.1s ease;
+}
+
+button:hover {
+transform: translateY(-3px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*define two columns in the grid*/
+  gap: 1rem; /*espace entre les éléments de la grid*/
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+} 
+
+.startTimer {
+  display: flex;
+  justify-content: center;
+  background-color: #48da1f;
+  border-radius: 10px;
+}
+
+.stopTimer {
+  display: flex;
+  justify-content: center;
+  background-color: #ce2c0c;
+  border-radius: 10px;
+}
+
+.resetTimer {
+  display: flex;
+  justify-content: center;
+  grid-column: span 2;
+  background-color: #6a6463;
+  border-radius: 10px;
+}
+
+
+/*TIMER display*/
+
+.displayTimer{
+  background-color: white;   /* fond blanc */
+  color: #8b6239;            /* texte brun */
+  text-align: center;         /* centrer le texte */
+  
+  width: 200px;              /* largeur fixe ou adaptée */
+  padding: 1.5rem;           /* espace autour du texte */
+  
+  border-radius: 12px;       /* coins arrondis */
+  
+  margin-top: auto;        /* centrer horizontalement + espacement vertical */
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* optionnel: effet “carte” */
+  
+  font-size: 2rem;           /* texte plus gros */
+  font-family: 'Press Start 2P', monospace; /* style cohérent */
+}
+
+.displayTimerStop{
+  background-color: rgb(83, 20, 20);   /* fond blanc */
+  color: #8b6239;            /* texte brun */
+  text-align: center;         /* centrer le texte */
+  
+  width: 200px;              /* largeur fixe ou adaptée */
+  padding: 1.5rem;           /* espace autour du texte */
+  
+  border-radius: 12px;       /* coins arrondis */
+  
+  margin-top: auto;        /* centrer horizontalement + espacement vertical */
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* optionnel: effet “carte” */
+  
+  font-size: 2rem;           /* texte plus gros */
+  font-family: 'Press Start 2P', monospace; /* style cohérent */
+}
