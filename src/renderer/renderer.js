@@ -7,7 +7,6 @@ const displayTimer = document.getElementById('displayTimer')
 btnStartTimer.addEventListener('click', () => {
   try {
     console.log("The start button has been pressed (UI side).")
-    //showInfoMessage('GO: Start button pressed!')
     window.pomodoroTimer.startTimer()
 
   } catch (e) {
@@ -24,29 +23,21 @@ btnStartTimer.addEventListener('click', () => {
 btnStopTimer.addEventListener('click', () => {
   try {
     console.log("The stop timer button has been pressed (UI side).")
-    //showInfoMessage('Test error message, the stop button has been pressed.')
     window.pomodoroTimer.stopTimer()
-    //showInfoMessage('STOP: Stop button pressed!')
-
   } catch (e) {
     //Message for the user
-      showErrorMessage('Erreur au stop timer.') 
+    showErrorMessage('Erreur au stop timer.') 
   }
 })
 
 btnResetTimer.addEventListener('click', () => {
   try {
     console.log("The reset timer has been pressed (UI side).")
-    //showInfoMessage('Test error message, the reset button has been pressed.')
     window.pomodoroTimer.resetTimer()
-    //showInfoMessage('RESET: Reset button pressed!')
-
   } catch (e) {
     //Message for the user
     showErrorMessage('reset button pressed.')
-    
   }
-  
 })
 
 //Retrieve info given by the main

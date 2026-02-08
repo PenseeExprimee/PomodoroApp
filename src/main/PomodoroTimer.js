@@ -8,10 +8,10 @@ class PomodoroTimer {
     this.phase = "work"
     this.pomodoroCycle = 4
 
-    //Constantes
-    this.shortBreakDuration = 2
-    this.longBreakDuration = 4
-    this.workSessionDuration = 3
+    //Constants
+    this.shortBreakDuration = 300
+    this.longBreakDuration = 3600
+    this.workSessionDuration = 1200
 
     //Current count
     this.remaining = this.workSessionDuration
@@ -33,9 +33,10 @@ class PomodoroTimer {
     this.pomodoroCycle = 4
     this.remaining = this.workSessionDuration
   }
-  //start
+  
   start()
-  { //onTick est la fonction qu'on passe a start et qui va s'appliquer à chaque tick => affichage
+  { 
+    //onTick: what happens every second
     //if an id exists, the timer has been started already, do nothing
     if(this.isRunning)
     { 
@@ -47,7 +48,7 @@ class PomodoroTimer {
       //Init display
       this.displayTimerAndPhase(this.phase, this.remaining)
 
-      //Call click every second
+      //Call on tick every second
       this.intervalId = setInterval(() => {
         this.onTick()
       }, 1000);
@@ -65,7 +66,6 @@ class PomodoroTimer {
     if(this.remaining <= 0)
     {
       this.phaseEnd()
-      //this.isRunning = false
     }
     else
     {
@@ -103,8 +103,6 @@ class PomodoroTimer {
       this.remaining = this.workSessionDuration
     }
     else if(this.phase === "longBreak"){
-      //this.phase = "done"
-      //this.remaining = 0
       this.reset()
     } 
   }
@@ -127,7 +125,6 @@ class PomodoroTimer {
   //reset
   reset() {
     console.log("Calling reset timer.")
-
     this.reHomePage();
     this.stop();
   }

@@ -1,26 +1,23 @@
 
-
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Style global */
 html, body {
   height: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: 'Press Start 2P', monospace; /* tu peux utiliser une autre si tu veux */
+  font-family: 'Press Start 2P', monospace;
   color: #e0c25f;
 }
 
 body 
 {
-  background-size: cover;        /* couvre toute la fenêtre */
-  background-position: center;   /* centrée */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -44,7 +41,6 @@ body.done {
   background-color: #e0c25f;
 }
 
-/* Titre de la candidature */
 .file-title {
 text-align: center;
 font-weight: bold;
@@ -77,8 +73,8 @@ button:disabled {
 
 .buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr; /*define two columns in the grid*/
-  gap: 1rem; /*espace entre les éléments de la grid*/
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   margin-bottom: 30px;
   margin-left: 5px;
   margin-right: 5px;
@@ -106,41 +102,38 @@ button:disabled {
   border-radius: 10px;
 }
 
-
-/*TIMER display*/
-
 .displayTimer{
-  background-color: white;   /* fond blanc */
-  color: #8b6239;            /* texte brun */
-  text-align: center;         /* centrer le texte */
+  background-color: white;
+  color: #8b6239;
+  text-align: center;
   
-  width: 200px;              /* largeur fixe ou adaptée */
-  padding: 1.5rem;           /* espace autour du texte */
+  width: 200px;
+  padding: 1.5rem;
   
-  border-radius: 12px;       /* coins arrondis */
+  border-radius: 12px;
   
-  margin-top: auto;        /* centrer horizontalement + espacement vertical */
+  margin-top: auto;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* optionnel: effet “carte” */
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
   
-  font-size: 2rem;           /* texte plus gros */
-  font-family: 'Press Start 2P', monospace; /* style cohérent */
+  font-size: 2rem;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .displayTimerStop{
-  background-color: rgb(83, 20, 20);   /* fond blanc */
-  color: #8b6239;            /* texte brun */
-  text-align: center;         /* centrer le texte */
+  background-color: rgb(83, 20, 20);
+  color: #8b6239;
+  text-align: center;
   
-  width: 200px;              /* largeur fixe ou adaptée */
-  padding: 1.5rem;           /* espace autour du texte */
+  width: 200px;
+  padding: 1.5rem;
   
-  border-radius: 12px;       /* coins arrondis */
+  border-radius: 12px;
   
-  margin-top: auto;        /* centrer horizontalement + espacement vertical */
+  margin-top: auto;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* optionnel: effet “carte” */
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
   
-  font-size: 2rem;           /* texte plus gros */
-  font-family: 'Press Start 2P', monospace; /* style cohérent */
+  font-size: 2rem;
+  font-family: 'Press Start 2P', monospace;
 }

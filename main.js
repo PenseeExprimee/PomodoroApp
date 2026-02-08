@@ -30,12 +30,8 @@ app.whenReady().then(createWindow)
 
 ipcMain.handle('start-timer', (event) => {
   const win = BrowserWindow.fromWebContents(event.sender) // retrieve the window which sent the message
-  //send back the seconds to the main page
   console.log("The start timer button has been pressed (MAIN side).")
   pomoTimer.start(pomoTimer.displayTimerAndPhase("startWork", 0), undefined, 10)
-  // pomoTimer.start((seconds) => {
-  //   win.webContents.send('tick-timer', seconds)
-  // })
 })
 
 ipcMain.handle('stop-timer', (event) => {
